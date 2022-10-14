@@ -40,7 +40,7 @@ spec:
         imagePullPolicy: IfNotPresent
         name: helloworld-state-hc2cp
         ports:
-        - containerPort: 8080
+        - containerPort: 80
         resources:
           limits:
             memory: 1024Mi
