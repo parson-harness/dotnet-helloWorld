@@ -1,0 +1,50 @@
+{{- if .Values.createNamespace}}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{.Values.namespace}}
+{{- end}}
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: my-helloWorld-svc
+#   labels:
+#     app: helloWorld
+# spec:
+#   type: LoadBalancer
+#   ports:
+#   - port: 80
+#   selector:
+#     app: helloWorld
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helloWorld
+  name: helloWorld
+  namespace: {{.Values.namespace}}
+spec:
+  replicas: {{int .Values.replicas}}
+  selector:
+    matchLabels:
+      app: helloWorld
+  template:
+    metadata:
+      labels:
+        app: helloWorld
+    spec:
+      containers:
+      - image: {{.Values.image}}
+        imagePullPolicy: IfNotPresent
+        name: helloWorld-state-hc2cp
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: 1024Mi
+            cpu: 100m
+          requests:
+            memory: 1024Mi
+            cpu: 100m
