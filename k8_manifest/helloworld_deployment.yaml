@@ -10,35 +10,35 @@ metadata:
 # metadata:
 #   name: my-helloWorld-svc
 #   labels:
-#     app: helloWorld
+#     app: helloworld
 # spec:
 #   type: LoadBalancer
 #   ports:
 #   - port: 80
 #   selector:
-#     app: helloWorld
+#     app: helloworld
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: helloWorld
-  name: helloWorld
+    app: helloworld
+  name: helloworld
   namespace: {{.Values.namespace}}
 spec:
   replicas: {{int .Values.replicas}}
   selector:
     matchLabels:
-      app: helloWorld
+      app: helloworld
   template:
     metadata:
       labels:
-        app: helloWorld
+        app: helloworld
     spec:
       containers:
       - image: {{.Values.image}}
         imagePullPolicy: IfNotPresent
-        name: helloWorld-state-hc2cp
+        name: helloworld-state-hc2cp
         ports:
         - containerPort: 80
         resources:
