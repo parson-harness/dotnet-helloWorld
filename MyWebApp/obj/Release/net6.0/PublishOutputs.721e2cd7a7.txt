@@ -1,7 +1,0 @@
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/MyWebApp
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/appsettings.Development.json
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/appsettings.json
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/MyWebApp.dll
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/MyWebApp.deps.json
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/MyWebApp.runtimeconfig.json
-/Users/toddparson/code/dotnet-helloWorld/MyWebApp/bin/Release/net6.0/publish/MyWebApp.pdb
