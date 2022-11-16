@@ -6,7 +6,7 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: Deploy to Dev
+        name: Dev Deploy
         identifier: Deploy_to_Dev
         template:
           templateRef: Deploy_to_Dev
